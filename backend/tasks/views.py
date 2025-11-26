@@ -29,7 +29,7 @@ def analyze_tasks(request):
 
 @api_view(["GET"])
 def suggest_tasks(request):
-    # Example tasks (replace with actual database query if needed)
+    # dummy data 
     tasks = [
         {
             "title": "Task 1",
