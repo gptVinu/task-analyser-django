@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f7;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #ccc;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #1a73e8;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0c57c7;
+}
+
+.analyze-btn {
+    width: 100%;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.result-item {
+    border-left: 5px solid #1a73e8;
+    padding: 10px;
+    margin: 10px 0;
+    background: #eef3ff;
+}
+
+/* Floating note styles */
+.floating-note {
+    position: relative; /* Relative to its parent container */
+    margin-top: 10px; /* Space below the button */
+    background: #ffcc00;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    animation: slideIn 2s ease-out forwards; /* Animation for sliding in */
+}
+
+/* Keyframes for sliding animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0); /* Slide into position */
+        opacity: 1;
+    }
+}

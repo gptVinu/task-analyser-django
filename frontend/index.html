@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Task Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Smart Task Analyzer</h1>
+
+    <div class="container">
+
+        <!-- Task Input Form -->
+        <div class="card">
+            <h2>Add Task</h2>
+
+            <div class="form-group">
+                <label>Title:</label>
+                <input type="text" id="title">
+            </div>
+
+            <div class="form-group">
+                <label>Due Date:</label>
+                <input type="date" id="due_date">
+            </div>
+
+            <div class="form-group">
+                <label>Estimated Hours:</label>
+                <input type="number" id="hours" step="0.1">
+            </div>
+
+            <div class="form-group">
+                <label>Importance (1–10):</label>
+                <input type="number" id="importance" min="1" max="10">
+            </div>
+
+            <div class="form-group">
+                <label>Dependencies (IDs, comma-separated):</label>
+                <input type="text" id="deps" placeholder="Example: 1,2,3">
+            </div>
+
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- Bulk JSON Input -->
+        <div class="card">
+            <h2>Bulk JSON Input (Optional)</h2>
+            <textarea id="jsonInput" placeholder='[ { "title": "...", "due_date": "...", ... } ]'></textarea>
+        </div>
+
+        <button class="analyze-btn" onclick="analyzeTasks()">Analyze Tasks</button>
+
+        <!-- Results -->
+        <div class="card">
+            <h2>Priority Results</h2>
+            <div id="results"></div>
+        </div>
+
+        <!-- Suggested Tasks Section -->
+        <div class="card">
+            <h2>Suggested Tasks for Today</h2>
+            <button class="analyze-btn" onclick="fetchSuggestedTasks()">Get Suggested Tasks</button>
+            <!-- Floating Note -->
+            <div id="floating-note" class="floating-note">
+                Note: This is just dummy data because the database setup is not applied yet.
+            </div>
+            <div id="suggested-tasks"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
